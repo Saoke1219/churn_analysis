@@ -1,4 +1,5 @@
 # churn_analysis
+
 SYRIATEL CUSTOMER CHURN PREDICTION
 
 PROJECT OVERVIEW:
@@ -8,32 +9,54 @@ In Syria, the telecommunications industry faces a significant challenge in retai
 Data 
 
 State : Different states of the customers
+
 Account length: number of days a customer's account has been active
+
 Area code : location of the customer
+
 Phone number : customer's phone number
+
 International plan : whether the customer uses the international plan or not
+
 Voice mail plan : whether the customer has subscribed to vmail plan or not
+
 Number vmail messages : if customer has a vmail plan, how many vmail messages do they get
+
 Total day minutes : total number of call minutes used during the day
+
 Total day calls : total number of calls made during the day
+
 Total day charge : total charge on day calls
+
 Total eve minutes : total number of call minutes used in the evening
+
 Total eve calls : total calls made in the evening
+
 Total eve charge : total charge on evening calls
+
 Total night minutes: Total number of call minutes used at night
+
 Total night calls : Total number of night calls
+
 Total night charge : Total charge on night calls
+
 Total intl minutes : total international minutes used
+
 Total intl calls : total number of international calls made
+
 Total intl charge : total charge on international calls
+
 Customer service calls : number of calls made to customer service
+
 Churn : boolean on whether the customer left or not
 
 
 BUSINESS PROBLEM:
+
 SyriaTel, a telecommunications company, aims to proactively address customer churn to retain valuable customers, reduce revenue loss, and enhance overall customer satisfaction and loyalty. To achieve this objective, SyriaTel seeks to develop a predictive model capable of identifying customers at risk of churn. By leveraging historical customer data and predictive analytics, SyriaTel aims to anticipate potential churn events and implement targeted retention strategies to mitigate churn and foster long-term customer relationships.
 
 OBJECTIVES:
+
 The objective of this project is to analyze SyriaTelcom's customer data to understand the factors influencing churn and develop predictive models to forecast customer attrition. By leveraging machine learning algorithms and predictive analytics, the project aims to:
 
 Identify key features and patterns associated with customer churn and non-churn.
@@ -136,7 +159,7 @@ We have a small number of customers with an international plan howerver we obser
 
 DATA PREPROCESSING AND PREPARATION
 
-Transform "churn"column from true and false to 0s and 1s
+Transform "churn"column from true and false to 0s and 1s.
 
 new_df2['churn'] = new_df2['churn'].map({True: 1, False: 0}).astype('int')
 
@@ -147,23 +170,18 @@ ONE-HOT ENCODING CATEGORICAL FEATURES
 To be able to run a classification model categorical features are transformed into dummy variable values of 0 and 1.
 
 dummy_df2_state = pd.get_dummies(new_df2["state"],dtype=np.int64,prefix="state_is")
-
 dummy_df2_area_code = pd.get_dummies(new_df2["area code"],dtype=np.int64,prefix="area_code_is")
-
 dummy_df2_international_plan = pd.get_dummies(new_df2["international plan"],dtype=np.int64,prefix="international_plan_is",drop_first = True)
-
 dummy_df2_voice_mail_plan = pd.get_dummies(new_df2["voice mail plan"],dtype=np.int64,prefix="voice_mail_plan_is",drop_first = True)
 
 new_df2 = pd.concat([new_df2,dummy_df2_state,dummy_df2_area_code,dummy_df2_international_plan,dummy_df2_voice_mail_plan],axis=1)
-
 new_df2 = new_df2.loc[:,~new_df2.columns.duplicated()]
-
 new_df2 = new_df2.drop(['state','area code','international plan','voice mail plan'],axis=1)
+
 
 SCALING NUMERICAL FEATURE
 
 scaler = MinMaxScaler()
-
 def scaling(columns):
 
     return scaler.fit_transform(new_df2[columns].values.reshape(-1,1))
@@ -173,6 +191,7 @@ for i in new_df2.select_dtypes(include=[np.number]).columns:
     new_df2[i] = scaling(i)
     
 new_df2.head()
+
 
 FEATURE SCALING & TRAINING
 
