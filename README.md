@@ -5,6 +5,7 @@ SYRIATEL CUSTOMER CHURN PREDICTION
 ![Syriatel_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/881192df-6623-4125-a24a-757c9008043c)
 
 PROJECT OVERVIEW:
+
 In Syria, the telecommunications industry faces a significant challenge in retaining customers amidst increasing competition and evolving consumer preferences. SyriaTelcom, one of the leading telecom service providers in the country, seeks to reduce customer churn by identifying patterns and factors contributing to customer attrition. High customer churn not only results in revenue loss but also undermines the company's reputation and market position.
 
 Data 
