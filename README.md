@@ -71,6 +71,8 @@ Improve SyriaTelcom's market position and competitiveness in the telecommunicati
 
 You will require the following libraries;
 
+'''
+
 import pandas as pd
 
 import numpy as np
@@ -118,6 +120,7 @@ Seaborn style:
 
 sns.set(style="whitegrid")
 
+'''
 
 
 
@@ -145,7 +148,7 @@ From the correlation heatmap,some of the features in the dataset demonstrate a p
 explore categorical features
 categoric_cols = ['state','area code','international plan','voice mail plan']
 
-DISTRIBUTION OF CATEGORICAL VARIABLES
+### DISTRIBUTION OF CATEGORICAL VARIABLES
 
 ![voice_mail_plan_count_on_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/4141d0b3-1499-409a-a7dc-d8fc8ab594a9)
 
@@ -158,19 +161,24 @@ This indicates customers have a preference of using this plan.
 
 We have a small number of customers with an international plan howerver we observe a high churn rate among this group.Possible reasons for the high churn rate could be dissatisfaction with the international plan, international plan charges.
 
-DATA PREPROCESSING AND PREPARATION
+### DATA PREPROCESSING AND PREPARATION
 
 Transform "churn"column from true and false to 0s and 1s.
+
 '''
+
 new_df2['churn'] = new_df2['churn'].map({True: 1, False: 0}).astype('int')
 
 new_df2.head()
+
 '''
-ONE-HOT ENCODING CATEGORICAL FEATURES
+
+### ONE-HOT ENCODING CATEGORICAL FEATURES
 
 To be able to run a classification model categorical features are transformed into dummy variable values of 0 and 1.
 
 """
+
 dummy_df2_state = pd.get_dummies(new_df2["state"],dtype=np.int64,prefix="state_is")
 dummy_df2_area_code = pd.get_dummies(new_df2["area code"],dtype=np.int64,prefix="area_code_is")
 dummy_df2_international_plan = pd.get_dummies(new_df2["international plan"],dtype=np.int64,prefix="international_plan_is",drop_first = True)
@@ -184,7 +192,8 @@ new_df2 = new_df2.drop(['state','area code','international plan','voice mail pla
 new_df2.head()
 
 """
-SCALING NUMERICAL FEATURE
+
+### SCALING NUMERICAL FEATURE
 
 scaler = MinMaxScaler()
 def scaling(columns):
@@ -199,6 +208,8 @@ new_df2.head()
 
 
 FEATURE SCALING & TRAINING
+
+'''
 
 # create the X and Y variables (predict and target values)
 
@@ -218,6 +229,7 @@ print("y_train shape:", y_train.shape)
 
 print("y_test shape:", y_test.shape)
 
+'''
 
 SMOTE
 
