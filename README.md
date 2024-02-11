@@ -7,6 +7,7 @@ In Syria, the telecommunications industry faces a significant challenge in retai
 Data 
 
 State : Different states of the customers
+
 Account length: number of days a customer's account has been active
 Area code : location of the customer
 Phone number : customer's phone number
