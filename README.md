@@ -5,6 +5,7 @@ PROJECT OVERVIEW:
 In Syria, the telecommunications industry faces a significant challenge in retaining customers amidst increasing competition and evolving consumer preferences. SyriaTelcom, one of the leading telecom service providers in the country, seeks to reduce customer churn by identifying patterns and factors contributing to customer attrition. High customer churn not only results in revenue loss but also undermines the company's reputation and market position.
 
 Data 
+
 State : Different states of the customers
 Account length: number of days a customer's account has been active
 Area code : location of the customer
@@ -25,7 +26,7 @@ Total intl minutes : total international minutes used
 Total intl calls : total number of international calls made
 Total intl charge : total charge on international calls
 Customer service calls : number of calls made to customer service
-=======
+
 
 SYRIATEL CUSTOMER CHURN PREDICTION
 
