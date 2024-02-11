@@ -1,8 +1,9 @@
 # churn_analysis
-<<<<<<< HEAD
+
 SYRIATEL CUSTOMER CHURN PREDICTION
 
-![Syriatel_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/881192df-6623-4125-a24a-757c9008043c)
+![Syriatel_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/76ba1d0a-3a0a-4eea-b8f1-1cc844a62112)
+
 
 PROJECT OVERVIEW:
 
@@ -50,13 +51,12 @@ Total intl charge : total charge on international calls
 
 Customer service calls : number of calls made to customer service
 
->>>>>>> 0a2a7a0ae1c178f7b6c36ad4c83ca0869adb38d8
+Churn : boolean on whether the customer left or not
 
 
 BUSINESS PROBLEM:
-<<<<<<< HEAD
-SyriaTel, a telecommunications company, aims to proactively address customer churn to retain valuable customers, reduce revenue loss, and enhance overall customer satisfaction and loyalty. To achieve this objective, SyriaTel seeks to develop a predictive model capable of identifying customers at risk of churn. By leveraging historical customer data and predictive analytics, SyriaTel aims to anticipate potential churn events and implement targeted retention strategies to mitigate churn and foster long-term customer relationships.
 
+SyriaTel, a telecommunications company, aims to proactively address customer churn to retain valuable customers, reduce revenue loss, and enhance overall customer satisfaction and loyalty. To achieve this objective, SyriaTel seeks to develop a predictive model capable of identifying customers at risk of churn. By leveraging historical customer data and predictive analytics, SyriaTel aims to anticipate potential churn events and implement targeted retention strategies to mitigate churn and foster long-term customer relationships.
 
 OBJECTIVES:
 
@@ -456,19 +456,9 @@ Branton Kieti <branton.kieti@student.moringaschool.com>
 Joseph Mangoka <joseph.mangoka@student.moringaschool.com>
 Beryl Saoke <beryl.saoke@student.moringaschool.com>
 Priscilla Nzula <Priscilla.nzula@student.moringaschool.com>
->>>>>>> 0a2a7a0ae1c178f7b6c36ad4c83ca0869adb38d8
 
 
 
 
 
 
-<<<<<<< HEAD
-Group 10 Members
-Branton Kieti
-Beryl Saoke
-Lorrah Ngine
-Joseph Mangoka
-Priscilla Nzula
-=======
->>>>>>> 0a2a7a0ae1c178f7b6c36ad4c83ca0869adb38d8
