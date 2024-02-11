@@ -49,7 +49,8 @@ Customer service calls : number of calls made to customer service
 
 SYRIATEL CUSTOMER CHURN PREDICTION
 
-![What-are-5G-Cell-Towers](https://github.com/Saoke1219/churn_analysis/assets/144167777/aa0d9905-3cbe-4848-9712-666e4b21bef8)
+![Syriatel_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/881192df-6623-4125-a24a-757c9008043c)
+
 
 
 PROJECT OVERVIEW:
