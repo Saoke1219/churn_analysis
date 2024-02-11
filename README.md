@@ -1,10 +1,19 @@
 # churn_analysis
 <<<<<<< HEAD
+
+SYRIATEL CUSTOMER CHURN PREDICTION
+
+![What-are-5G-Cell-Towers](https://github.com/Saoke1219/churn_analysis/assets/144167777/aa0d9905-3cbe-4848-9712-666e4b21bef8)
+
+PROJECT OVERVIEW: 
+=======
+<<<<<<< HEAD
 SYRIATEL CUSTOMER CHURN PREDICTION
 
 ![Syriatel_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/881192df-6623-4125-a24a-757c9008043c)
 
 PROJECT OVERVIEW:
+>>>>>>> b74202e4de86dd8bd45facd8480c5f7abc071652
 
 In Syria, the telecommunications industry faces a significant challenge in retaining customers amidst increasing competition and evolving consumer preferences. SyriaTelcom, one of the leading telecom service providers in the country, seeks to reduce customer churn by identifying patterns and factors contributing to customer attrition. High customer churn not only results in revenue loss but also undermines the company's reputation and market position.
 
@@ -50,6 +59,10 @@ Total intl charge : total charge on international calls
 
 Customer service calls : number of calls made to customer service
 
+<<<<<<< HEAD
+Churn : boolean on whether the customer left or not
+
+=======
 >>>>>>> 0a2a7a0ae1c178f7b6c36ad4c83ca0869adb38d8
 
 
@@ -58,11 +71,21 @@ BUSINESS PROBLEM:
 SyriaTel, a telecommunications company, aims to proactively address customer churn to retain valuable customers, reduce revenue loss, and enhance overall customer satisfaction and loyalty. To achieve this objective, SyriaTel seeks to develop a predictive model capable of identifying customers at risk of churn. By leveraging historical customer data and predictive analytics, SyriaTel aims to anticipate potential churn events and implement targeted retention strategies to mitigate churn and foster long-term customer relationships.
 
 
+>>>>>>> b74202e4de86dd8bd45facd8480c5f7abc071652
 OBJECTIVES:
 
 The objective of this project is to analyze SyriaTelcom's customer data to understand the factors influencing churn and develop predictive models to forecast customer attrition. By leveraging machine learning algorithms and predictive analytics, the project aims to:
 
 Identify key features and patterns associated with customer churn and non-churn.
+<<<<<<< HEAD
+Build predictive models to forecast the likelihood of churn for individual subscribers.
+Provide actionable insights to SyriaTelcom for implementing targeted retention strategies and reducing customer attrition.
+Enhance customer satisfaction and loyalty by addressing the underlying issues driving churn.
+Improve SyriaTelcom's market position and competitiveness in the telecommunications industry by fostering long-term customer relationships.
+
+We will require the following libraries;
+
+=======
 
 Build predictive models to forecast the likelihood of churn for individual subscribers.
 
@@ -73,6 +96,7 @@ Enhance customer satisfaction and loyalty by addressing the underlying issues dr
 Improve SyriaTelcom's market position and competitiveness in the telecommunications industry by fostering long-term customer relationships.
 
 You will require the following libraries;
+>>>>>>> b74202e4de86dd8bd45facd8480c5f7abc071652
 ```
 import pandas as pd
 
@@ -113,7 +137,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 
 from sklearn.ensemble import RandomForestClassifier
-
 
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, roc_curve
 
