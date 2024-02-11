@@ -2,7 +2,7 @@
 
 SYRIATEL CUSTOMER CHURN PREDICTION
 
-![What-are-5G-Cell-Towers](https://github.com/Saoke1219/churn_analysis/assets/144167777/aa0d9905-3cbe-4848-9712-666e4b21bef8)
+![Syriatel_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/76ba1d0a-3a0a-4eea-b8f1-1cc844a62112)
 
 
 PROJECT OVERVIEW:
