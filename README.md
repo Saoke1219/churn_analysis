@@ -450,7 +450,7 @@ We are searching for a model that can predict with high accuracy and precision r
 
 
 
-### Group 10 Members;
+### Collaborators
 Lorrah Ngine <lorrah.ngine@student.moringaschool.com> - Lead
 Branton Kieti <branton.kieti@student.moringaschool.com>
 Joseph Mangoka <joseph.mangoka@student.moringaschool.com>
