@@ -174,10 +174,10 @@ dummy_df2_area_code = pd.get_dummies(new_df2["area code"],dtype=np.int64,prefix=
 dummy_df2_international_plan = pd.get_dummies(new_df2["international plan"],dtype=np.int64,prefix="international_plan_is",drop_first = True)
 dummy_df2_voice_mail_plan = pd.get_dummies(new_df2["voice mail plan"],dtype=np.int64,prefix="voice_mail_plan_is",drop_first = True)
 
+
 new_df2 = pd.concat([new_df2,dummy_df2_state,dummy_df2_area_code,dummy_df2_international_plan,dummy_df2_voice_mail_plan],axis=1)
 new_df2 = new_df2.loc[:,~new_df2.columns.duplicated()]
 new_df2 = new_df2.drop(['state','area code','international plan','voice mail plan'],axis=1)
-
 
 SCALING NUMERICAL FEATURE
 
