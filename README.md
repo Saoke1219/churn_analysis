@@ -441,6 +441,7 @@ plt.title('Accuracy of the models');
 ![Model_comparison_Accuracy](https://github.com/Saoke1219/churn_analysis/assets/144167777/bc635835-9083-4b9c-8b8e-42288a49c641)
 
 
+We are searching for a model that can predict with high accuracy and precision random forest classifier fits those requirements.
 
 ```
 
@@ -449,14 +450,15 @@ plt.title('Accuracy of the models');
 
 
 
-Group 10 Members
+### Group 10 Members;
+Lorrah Ngine <lorrah.ngine@student.moringaschool.com> - Lead
+Branton Kieti <branton.kieti@student.moringaschool.com>
+Joseph Mangoka <joseph.mangoka@student.moringaschool.com>
+Beryl Saoke <beryl.saoke@student.moringaschool.com>
+Priscilla Nzula <Priscilla.nzula@student.moringaschool.com>
 
-Branton Kieti
 
-Beryl Saoke
 
-Lorrah Ngine
 
-Joseph Mangoka
 
-Priscilla Nzula
+
