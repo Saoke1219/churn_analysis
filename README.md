@@ -9,23 +9,41 @@ Data
 State : Different states of the customers
 
 Account length: number of days a customer's account has been active
+
 Area code : location of the customer
+
 Phone number : customer's phone number
+
 International plan : whether the customer uses the international plan or not
+
 Voice mail plan : whether the customer has subscribed to vmail plan or not
+
 Number vmail messages : if customer has a vmail plan, how many vmail messages do they get
+
 Total day minutes : total number of call minutes used during the day
+
 Total day calls : total number of calls made during the day
+
 Total day charge : total charge on day calls
+
 Total eve minutes : total number of call minutes used in the evening
+
 Total eve calls : total calls made in the evening
+
 Total eve charge : total charge on evening calls
+
 Total night minutes: Total number of call minutes used at night
+
 Total night calls : Total number of night calls
+
 Total night charge : Total charge on night calls
+
 Total intl minutes : total international minutes used
+
 Total intl calls : total number of international calls made
+
 Total intl charge : total charge on international calls
+
 Customer service calls : number of calls made to customer service
 
 
