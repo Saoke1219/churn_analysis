@@ -43,33 +43,59 @@ Enhance customer satisfaction and loyalty by addressing the underlying issues dr
 Improve SyriaTelcom's market position and competitiveness in the telecommunications industry by fostering long-term customer relationships.
 
 You will require the following libraries;
+
 import pandas as pd
+
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 %matplotlib inline
+
 import seaborn as sns
+
 import warnings 
+
 warnings.filterwarnings("ignore")
+
 from sklearn.model_selection import train_test_split, cross_val_score
+
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
+
 from sklearn.impute import SimpleImputer
+
 from sklearn.compose import ColumnTransformer
+
 from sklearn.pipeline import Pipeline
+
 from sklearn.preprocessing import LabelEncoder
+
 from sklearn.preprocessing import OneHotEncoder
+
 from sklearn.metrics import classification_report, confusion_matrix
+
 from sklearn.model_selection import GridSearchCV
+
 from sklearn.tree import DecisionTreeClassifier 
+
 from sklearn.linear_model import LogisticRegression
+
 from sklearn.neighbors import KNeighborsClassifier
+
 from sklearn.ensemble import RandomForestClassifier
+
+
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, roc_curve
 
 Seaborn style:
+
 sns.set(style="whitegrid")
 
 
+
+
 DATA EXPLORATION
+
 In this analysis, the 'churn' feature serves as the dependent variable.The 'churn' variable signifies whether a customer has terminated their contract with SyriaTel. A value of 'True' means a contract termination, while 'False' indicates that the customer has not terminated their contract and maintains an active account.
 
 ![Churn_Distribution](https://github.com/Saoke1219/churn_analysis/assets/144167777/9fe78271-f2d2-4579-a28f-c0a00727a95c)
@@ -92,8 +118,13 @@ Above are distribution plots of churned and non-churned customers in the numeric
 
 
 Group 10 Members
+
 Branton Kieti
+
 Beryl Saoke
+
 Lorrah Ngine
+
 Joseph Mangoka
+
 Priscilla Nzula
