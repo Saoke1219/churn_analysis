@@ -161,16 +161,16 @@ We have a small number of customers with an international plan howerver we obser
 DATA PREPROCESSING AND PREPARATION
 
 Transform "churn"column from true and false to 0s and 1s.
-
+'''
 new_df2['churn'] = new_df2['churn'].map({True: 1, False: 0}).astype('int')
 
 new_df2.head()
-
+'''
 ONE-HOT ENCODING CATEGORICAL FEATURES
 
 To be able to run a classification model categorical features are transformed into dummy variable values of 0 and 1.
 
-
+"""
 dummy_df2_state = pd.get_dummies(new_df2["state"],dtype=np.int64,prefix="state_is")
 dummy_df2_area_code = pd.get_dummies(new_df2["area code"],dtype=np.int64,prefix="area_code_is")
 dummy_df2_international_plan = pd.get_dummies(new_df2["international plan"],dtype=np.int64,prefix="international_plan_is",drop_first = True)
@@ -181,7 +181,9 @@ new_df2 = pd.concat([new_df2,dummy_df2_state,dummy_df2_area_code,dummy_df2_inter
 new_df2 = new_df2.loc[:,~new_df2.columns.duplicated()]
 new_df2 = new_df2.drop(['state','area code','international plan','voice mail plan'],axis=1)
 
+new_df2.head()
 
+"""
 SCALING NUMERICAL FEATURE
 
 scaler = MinMaxScaler()
