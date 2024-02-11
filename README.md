@@ -1,5 +1,6 @@
 # churn_analysis
 SYRIATEL CUSTOMER CHURN PREDICTION
+
 PROJECT OVERVIEW:
 
 In Syria, the telecommunications industry faces a significant challenge in retaining customers amidst increasing competition and evolving consumer preferences. SyriaTelcom, one of the leading telecom service providers in the country, seeks to reduce customer churn by identifying patterns and factors contributing to customer attrition. High customer churn not only results in revenue loss but also undermines the company's reputation and market position.
@@ -68,11 +69,19 @@ Seaborn style:
 sns.set(style="whitegrid")
 
 
-TARGET
+DATA EXPLORATION
+In this analysis, the 'churn' feature serves as the dependent variable.The 'churn' variable signifies whether a customer has terminated their contract with SyriaTel. A value of 'True' means a contract termination, while 'False' indicates that the customer has not terminated their contract and maintains an active account.
+
+![Churn_Distribution](https://github.com/Saoke1219/churn_analysis/assets/144167777/9fe78271-f2d2-4579-a28f-c0a00727a95c)
 
 
 
+The above pie chart shows the distribution of churned and non-churned syria tel customers.The distribution is indicated in percentage,with 14.5% "true churn" indicates customers who have ended their subscription. 85.5% "false churn" indicates customers who are still active subscribers.This also shows "non-churn") has a much higher count compared to the other class ("churn"), indicating that the dataset has a class imbalance.
 
+![numerical_distribution_plot](https://github.com/Saoke1219/churn_analysis/assets/144167777/ea29c2c6-b04d-41e3-90e6-e7294875f705)
+
+
+Above are distribution plots of churned and non-churned customers in the numerical category.We observe that non-churned customers are more than churned customers.we also observe that the distribution is normal while that of total international calls is skewed to the right though still normally distributed.
 
 
 
