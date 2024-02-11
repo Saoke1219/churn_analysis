@@ -71,8 +71,6 @@ Improve SyriaTelcom's market position and competitiveness in the telecommunicati
 
 You will require the following libraries;
 
-'''
-
 import pandas as pd
 
 import numpy as np
@@ -120,10 +118,6 @@ Seaborn style:
 
 sns.set(style="whitegrid")
 
-'''
-
-
-
 DATA EXPLORATION
 
 In this analysis, we will be dropping the 'phone number' column as it is a unique identifier for each customer therefore not relevant for analysis. The 'churn' feature serves as the dependent variable.The 'churn' variable signifies whether a customer has terminated their contract with SyriaTel. A value of 'True' means a contract termination, while 'False' indicates that the customer has not terminated their contract and maintains an active account.
@@ -165,19 +159,13 @@ We have a small number of customers with an international plan howerver we obser
 
 Transform "churn"column from true and false to 0s and 1s.
 
-'''
-
 new_df2['churn'] = new_df2['churn'].map({True: 1, False: 0}).astype('int')
 
 new_df2.head()
 
-'''
-
 ### ONE-HOT ENCODING CATEGORICAL FEATURES
 
 To be able to run a classification model categorical features are transformed into dummy variable values of 0 and 1.
-
-"""
 
 dummy_df2_state = pd.get_dummies(new_df2["state"],dtype=np.int64,prefix="state_is")
 dummy_df2_area_code = pd.get_dummies(new_df2["area code"],dtype=np.int64,prefix="area_code_is")
@@ -190,8 +178,6 @@ new_df2 = new_df2.loc[:,~new_df2.columns.duplicated()]
 new_df2 = new_df2.drop(['state','area code','international plan','voice mail plan'],axis=1)
 
 new_df2.head()
-
-"""
 
 ### SCALING NUMERICAL FEATURE
 
@@ -208,8 +194,6 @@ new_df2.head()
 
 
 FEATURE SCALING & TRAINING
-
-'''
 
 # create the X and Y variables (predict and target values)
 
@@ -229,14 +213,12 @@ print("y_train shape:", y_train.shape)
 
 print("y_test shape:", y_test.shape)
 
-'''
-
 SMOTE
 
 SMOTE is a data resampling technique used to address class imbalance by generating synthetic samples for the minority class.In this case our minority is churned.
 
 #smote is used to address class imbalance in machine learning
-
+```
 from imblearn.over_sampling import SMOTE
 
 oversample = SMOTE(k_neighbors=5)
@@ -245,10 +227,13 @@ X_smote, y_smote = oversample.fit_resample(X, y)
 
 print(y_smote.value_counts())
 
-
+```
 MODELLING
 
 Logistic Regression Model
+
+
+
 
 
 Group 10 Members
