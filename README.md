@@ -146,6 +146,7 @@ explore categorical features
 categoric_cols = ['state','area code','international plan','voice mail plan']
 
 DISTRIBUTION OF CATEGORICAL VARIABLES
+
 ![voice_mail_plan_count_on_churn](https://github.com/Saoke1219/churn_analysis/assets/144167777/4141d0b3-1499-409a-a7dc-d8fc8ab594a9)
 
 We can observe from the plot above that there is a significantly low churn rate among customers with a voicemail plan.
@@ -169,6 +170,7 @@ ONE-HOT ENCODING CATEGORICAL FEATURES
 
 To be able to run a classification model categorical features are transformed into dummy variable values of 0 and 1.
 
+
 dummy_df2_state = pd.get_dummies(new_df2["state"],dtype=np.int64,prefix="state_is")
 dummy_df2_area_code = pd.get_dummies(new_df2["area code"],dtype=np.int64,prefix="area_code_is")
 dummy_df2_international_plan = pd.get_dummies(new_df2["international plan"],dtype=np.int64,prefix="international_plan_is",drop_first = True)
@@ -178,6 +180,7 @@ dummy_df2_voice_mail_plan = pd.get_dummies(new_df2["voice mail plan"],dtype=np.i
 new_df2 = pd.concat([new_df2,dummy_df2_state,dummy_df2_area_code,dummy_df2_international_plan,dummy_df2_voice_mail_plan],axis=1)
 new_df2 = new_df2.loc[:,~new_df2.columns.duplicated()]
 new_df2 = new_df2.drop(['state','area code','international plan','voice mail plan'],axis=1)
+
 
 SCALING NUMERICAL FEATURE
 
