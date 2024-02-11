@@ -70,7 +70,7 @@ Enhance customer satisfaction and loyalty by addressing the underlying issues dr
 Improve SyriaTelcom's market position and competitiveness in the telecommunications industry by fostering long-term customer relationships.
 
 You will require the following libraries;
-
+```
 import pandas as pd
 
 import numpy as np
@@ -117,7 +117,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 Seaborn style:
 
 sns.set(style="whitegrid")
-
+```
 DATA EXPLORATION
 
 In this analysis, we will be dropping the 'phone number' column as it is a unique identifier for each customer therefore not relevant for analysis. The 'churn' feature serves as the dependent variable.The 'churn' variable signifies whether a customer has terminated their contract with SyriaTel. A value of 'True' means a contract termination, while 'False' indicates that the customer has not terminated their contract and maintains an active account.
@@ -158,7 +158,7 @@ We have a small number of customers with an international plan howerver we obser
 ### DATA PREPROCESSING AND PREPARATION
 
 Transform "churn"column from true and false to 0s and 1s.
-
+```
 new_df2['churn'] = new_df2['churn'].map({True: 1, False: 0}).astype('int')
 
 new_df2.head()
@@ -178,9 +178,9 @@ new_df2 = new_df2.loc[:,~new_df2.columns.duplicated()]
 new_df2 = new_df2.drop(['state','area code','international plan','voice mail plan'],axis=1)
 
 new_df2.head()
-
+```
 ### SCALING NUMERICAL FEATURE
-
+```
 scaler = MinMaxScaler()
 def scaling(columns):
 
@@ -192,9 +192,9 @@ for i in new_df2.select_dtypes(include=[np.number]).columns:
     
 new_df2.head()
 
-
+```
 FEATURE SCALING & TRAINING
-
+```
 # create the X and Y variables (predict and target values)
 
 y = new_df2['churn']
@@ -212,7 +212,7 @@ print("X_test shape:", X_test.shape)
 print("y_train shape:", y_train.shape)
 
 print("y_test shape:", y_test.shape)
-
+```
 SMOTE
 
 SMOTE is a data resampling technique used to address class imbalance by generating synthetic samples for the minority class.In this case our minority is churned.
