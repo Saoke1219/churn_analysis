@@ -98,9 +98,10 @@ Total intl calls : total number of international calls made
 Total intl charge : total charge on international calls
 
 Customer service calls : number of calls made to customer service
+Churn : boolean on whether the customer left or not
 
 >>>>>>> 0a2a7a0ae1c178f7b6c36ad4c83ca0869adb38d8
-Churn : boolean on whether the customer left or not
+
 
 
 BUSINESS PROBLEM:
