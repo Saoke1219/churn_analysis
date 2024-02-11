@@ -2,6 +2,9 @@
 
 SYRIATEL CUSTOMER CHURN PREDICTION
 
+![What-are-5G-Cell-Towers](https://github.com/Saoke1219/churn_analysis/assets/144167777/aa0d9905-3cbe-4848-9712-666e4b21bef8)
+
+
 PROJECT OVERVIEW:
 
 In Syria, the telecommunications industry faces a significant challenge in retaining customers amidst increasing competition and evolving consumer preferences. SyriaTelcom, one of the leading telecom service providers in the country, seeks to reduce customer churn by identifying patterns and factors contributing to customer attrition. High customer churn not only results in revenue loss but also undermines the company's reputation and market position.
@@ -228,14 +231,105 @@ X_smote, y_smote = oversample.fit_resample(X, y)
 print(y_smote.value_counts())
 
 ```
-MODELLING
+### MODELLING
 
-Logistic Regression Model
+### Logistic Regression Model
+```
+# Create logistic regression model:
+lr = LogisticRegression()
+
+# Train the model:
+lr.fit(X_train, y_train)
+
+# Make predictions on the training and testing sets:
+y_train_pred = lr.predict(X_train)
+y_test_pred = lr.predict(X_test)
+```
+```
+# Feature Importances
+feature_importance = abs(lr.coef_[0])
+feature_importance = 100.0 * (feature_importance / feature_importance.max())[0:10]
+sorted_idx = np.argsort(feature_importance)[0:10]
+pos = np.arange(sorted_idx.shape[0]) + .5
+
+```
+```
+print(classification_report(y_test, y_test_pred, target_names=['0', '1']))
+```
+
+```
+print('Accuracy score for testing set: ',round(accuracy_score(y_test,y_test_pred),5))
+print('F1 score for testing set: ',round(f1_score(y_test,y_test_pred),5))
+print('Recall score for testing set: ',round(recall_score(y_test,y_test_pred),5))
+print('Precision score for testing set: ',round(precision_score(y_test,y_test_pred),5))
+cm_lr = confusion_matrix(y_test, y_test_pred)
+
+```
+
+
+
+### Decision Tree Model
+```
+# Create logistic regression model:
+dt = DecisionTreeClassifier()
+
+# Train the model:
+dt.fit(X_train, y_train)
+
+# Make predictions on the training and testing sets:
+y_train_pred = dt.predict(X_train)
+y_test_pred = dt.predict(X_test)
+
+```
+```
+feature_names = list(X_train.columns)
+importances = dt.feature_importances_[0:15]
+indices = np.argsort(importances)
+
+```
+```
+print(classification_report(y_test, y_test_pred, target_names=['0', '1']))
+```
+```
+print('Accuracy score for testing set: ',round(accuracy_score(y_test,y_test_pred),5))
+print('F1 score for testing set: ',round(f1_score(y_test,y_test_pred),5))
+print('Recall score for testing set: ',round(recall_score(y_test,y_test_pred),5))
+print('Precision score for testing set: ',round(precision_score(y_test,y_test_pred),5))
+cm_dt = confusion_matrix(y_test, y_test_pred)
+```
+
+### Random Forest
+```
+# Create logistic regression model:
+rf = RandomForestClassifier() 
+
+# Train the model:
+rf.fit(X_train, y_train)
+
+# Make predictions on the training and testing sets:
+y_train_pred = rf.predict(X_train)
+y_test_pred = rf.predict(X_test)
+
+```
+
+```
+Importance =pd.DataFrame({"Importance": rf.feature_importances_*100},index = X_train.columns)
+print(classification_report(y_test, y_test_pred, target_names=['0', '1']))
+```
+```
+print('Accuracy score for testing set: ',round(accuracy_score(y_test,y_test_pred),5))
+print('F1 score for testing set: ',round(f1_score(y_test,y_test_pred),5))
+print('Recall score for testing set: ',round(recall_score(y_test,y_test_pred),5))
+print('Precision score for testing set: ',round(precision_score(y_test,y_test_pred),5))
+cm_rf = confusion_matrix(y_test, y_test_pred)
+
+```
+```
 
 
 
 
-
+```
 Group 10 Members
 
 Branton Kieti
